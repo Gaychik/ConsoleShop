@@ -1,11 +1,13 @@
 #pragma once
+#include "Item.h"
+#include <vector>
 struct Order
 {
-	Order(int p_item_id, int p_client_id)
+	Order(int p_client_id)
 	{
-		item_id = p_item_id;
 		client_id = p_client_id;
 	}
 public:
 	int item_id, client_id;
+	vector<Item> items;
 };

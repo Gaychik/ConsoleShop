@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClCompile Include="app.cpp" />
     <ClCompile Include="mysql.cpp" />
+    <ClCompile Include="UserController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h" />
@@ -146,6 +147,7 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="mysql.h" />
     <ClInclude Include="Order.h" />
+    <ClInclude Include="UserController.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
