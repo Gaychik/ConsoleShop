@@ -55,30 +55,29 @@ void delete_item(int id)
     pstmt->setInt(1, id);
     pstmt->execute();
 }
-
-void insert_order(Order order)
+bool insert_order(Order order)
 {
     pstmt = con->prepareStatement("INSERT INTO Orders(client_id) values(?)");
     pstmt->setInt(1,order.client_id);
     result =pstmt->executeQuery();//возможно возвратить id, нужно протестить
     int order_id=result->getInt(1);
-    for (auto item:order.items)
+    
+    for (auto item : order.items)
     {
         pstmt = con->prepareStatement("INSERT INTO Orders_and_Items(order_id,item_id) values(?,?)");
         pstmt->setInt(1, order_id);
         pstmt->setInt(2, item.id);
-        pstmt->execute();
+        if (not pstmt->execute()) return false;
     }
+    return true;
 }
-
 Item get_item(int item_id)
 {
-    pstmt = con->prepareStatement("Select * from Items where id=(?) limit 1");
+    pstmt = con->prepareStatement("Select * from Items where id=? limit 1");
     pstmt->setInt(1,item_id);
     result = pstmt->executeQuery();
     return Item(result->getInt(1), result->getString(2), result->getInt(3));
 }
-
 void insert_client(Client client)
 {
     pstmt = con->prepareStatement("INSERT INTO Items(name,age,password,login) values(?,?,?,?)");
@@ -92,7 +91,9 @@ void insert_client(Client client)
 Client* get_client(string login,string password)
 {
     Client* selected_client;
-    pstmt = con->prepareStatement("Select * from clients where login="+login+" password="+password+" LIMIT 1");
+           pstmt = con->prepareStatement("Select * from clients where login=? and password=? LIMIT 1");
+           pstmt->setString(1, login);
+           pstmt->setString(2, password);
     result=pstmt->executeQuery();
     selected_client = new Client(
         result->getString(2).c_str(),//имя
@@ -104,16 +105,13 @@ Client* get_client(string login,string password)
 
         return selected_client;
 }
-
 vector<Item>get_items_by_order(int order_id)
 {
     vector<Item> items;
     pstmt = con->prepareStatement("SELECT * FROM orders_and_items WHERE =" + to_string(order_id));
     result = pstmt->executeQuery();
-   /* while (result->next())
-    {
-        items.push_back(Item(result->getInt(1), result->getString(2).c_str(), result->getInt(3)));
-    }*/
+    while (result->next())
+        items.push_back(get_item(result->getInt(2)));
     return items;
 }
 

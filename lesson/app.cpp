@@ -9,12 +9,10 @@
 using namespace std;
 int main()
 {
-	setlocale(LC_ALL, "");
-	SetConsoleOutputCP(CP_UTF8);
 	connection_to_db();
 	auto items = get_items("items");
 	auto client_id = Authorize();
-	cout << "Какой вы хотите купить товар?" << endl;
+	cout << "What do you want to buy?" << endl;
 	int n = 0;
 	for (auto item : items)
 	{
@@ -32,8 +30,10 @@ int main()
 		items[choice - 1].balance--;
 		order.items.push_back(items[choice - 1]);
 		cout << "Choice is selected.Add something else to your order or press zero!" << endl;
-	}
-	insert_order(order);
+	}    
+	if (insert_order(order)) cout << "Our order is completed.Thank you for trusting us" << endl;
+	else cout << "Error when creating an order";
+
 	//{
 	//	    
 	//		order.push_back(names[choice - 1]);
