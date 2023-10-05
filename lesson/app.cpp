@@ -25,7 +25,6 @@ int main()
 	//Клиент регистрируется
 	//Клиент авторизируется
 	auto order = Order(client_id);
-
 	while (choice != 0)
 	{
 		cin >> choice;

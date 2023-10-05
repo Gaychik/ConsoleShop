@@ -69,18 +69,24 @@ void insert_order(Order order)
         pstmt->setInt(2, item.id);
         pstmt->execute();
     }
-    
+}
 
-
+Item get_item(int item_id)
+{
+    pstmt = con->prepareStatement("Select * from Items where id=(?) limit 1");
+    pstmt->setInt(1,item_id);
+    result = pstmt->executeQuery();
+    return Item(result->getInt(1), result->getString(2), result->getInt(3));
 }
 
 void insert_client(Client client)
 {
-    pstmt = con->prepareStatement("INSERT INTO Items(name,login,password,age) values(?,?,?,?)");
+    pstmt = con->prepareStatement("INSERT INTO Items(name,age,password,login) values(?,?,?,?)");
     pstmt->setString(1, client.name);
-    pstmt->setString(2, client.login);
+    pstmt->setInt(2, client.age);
     pstmt->setString(3, client.pass);
-    pstmt->setInt(4, client.age);
+    pstmt->setString(4, client.login);
+
     pstmt->execute();
 }
 Client* get_client(string login,string password)
@@ -98,4 +104,18 @@ Client* get_client(string login,string password)
 
         return selected_client;
 }
+
+vector<Item>get_items_by_order(int order_id)
+{
+    vector<Item> items;
+    pstmt = con->prepareStatement("SELECT * FROM orders_and_items WHERE =" + to_string(order_id));
+    result = pstmt->executeQuery();
+   /* while (result->next())
+    {
+        items.push_back(Item(result->getInt(1), result->getString(2).c_str(), result->getInt(3)));
+    }*/
+    return items;
+}
+
+
 

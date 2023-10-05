@@ -8,6 +8,6 @@ struct Order
 		client_id = p_client_id;
 	}
 public:
-	int item_id, client_id;
+	int client_id;
 	vector<Item> items;
 };
