@@ -27,6 +27,12 @@
     <ClCompile Include="UserController.cpp">
       <Filter>Controllers</Filter>
     </ClCompile>
+    <ClCompile Include="AdminController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mysql.h">

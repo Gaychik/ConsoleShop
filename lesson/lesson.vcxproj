@@ -137,7 +137,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdminController.cpp" />
     <ClCompile Include="app.cpp" />
+    <ClCompile Include="ItemController.cpp" />
     <ClCompile Include="mysql.cpp" />
     <ClCompile Include="UserController.cpp" />
   </ItemGroup>

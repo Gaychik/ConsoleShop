@@ -31,7 +31,7 @@ int Authorize()
 	auto client = get_client(login, pass);
 	if (not client)
 	{
-		cout << "Do sign up now";
+		cout << "Do sign up now"<<endl;
 		client=Register();
 	}
 	cout << "Sign in is succesfully completed!" << endl;

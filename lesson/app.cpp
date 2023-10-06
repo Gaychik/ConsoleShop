@@ -10,19 +10,16 @@ using namespace std;
 int main()
 {
 	connection_to_db();
-	auto items = get_items("items");
+	
 	auto client_id = Authorize();
 	cout << "What do you want to buy?" << endl;
-	int n = 0;
-	for (auto item : items)
-	{
-		cout <<n+1<<")" << item.name << "-" << item.balance << endl;
-		n++;
-	}
+	
 	int choice = -1;
 	//Клиент регистрируется
 	//Клиент авторизируется
 	auto order = Order(client_id);
+	//нужно создать ItemController.h
+	show_items()
 	while (choice != 0)
 	{
 		cin >> choice;

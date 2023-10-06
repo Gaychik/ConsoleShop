@@ -57,14 +57,14 @@ void delete_item(int id)
 }
 bool insert_order(Order order)
 {
-    pstmt = con->prepareStatement("INSERT INTO Orders(client_id) values(?)");
+    pstmt = con->prepareStatement("INSERT INTO orders (client_id) values(?)");
     pstmt->setInt(1,order.client_id);
     result =pstmt->executeQuery();//возможно возвратить id, нужно протестить
     int order_id=result->getInt(1);
     
     for (auto item : order.items)
     {
-        pstmt = con->prepareStatement("INSERT INTO Orders_and_Items(order_id,item_id) values(?,?)");
+        pstmt = con->prepareStatement("INSERT INTO orders_and_Items (order_id,item_id) values(?,?)");
         pstmt->setInt(1, order_id);
         pstmt->setInt(2, item.id);
         if (not pstmt->execute()) return false;
@@ -73,14 +73,13 @@ bool insert_order(Order order)
 }
 Item get_item(int item_id)
 {
-    pstmt = con->prepareStatement("Select * from Items where id=? limit 1");
-    pstmt->setInt(1,item_id);
+    pstmt = con->prepareStatement("Select * from items where id='"+to_string(item_id)+"' limit 1");
     result = pstmt->executeQuery();
     return Item(result->getInt(1), result->getString(2), result->getInt(3));
 }
 void insert_client(Client client)
 {
-    pstmt = con->prepareStatement("INSERT INTO Items(name,age,password,login) values(?,?,?,?)");
+    pstmt = con->prepareStatement("INSERT INTO clients (name,age,password,login) values(?,?,?,?)");
     pstmt->setString(1, client.name);
     pstmt->setInt(2, client.age);
     pstmt->setString(3, client.pass);
@@ -91,10 +90,11 @@ void insert_client(Client client)
 Client* get_client(string login,string password)
 {
     Client* selected_client;
-           pstmt = con->prepareStatement("Select * from clients where login=? and password=? LIMIT 1");
+           pstmt = con->prepareStatement("Select * from clients where login=? and password=?");
            pstmt->setString(1, login);
            pstmt->setString(2, password);
     result=pstmt->executeQuery();
+    if (not result->first()) return nullptr;
     selected_client = new Client(
         result->getString(2).c_str(),//имя
         result->getInt(5),//возраст
