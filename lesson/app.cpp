@@ -30,7 +30,7 @@ int main()
 		items[choice - 1].balance--;
 		order.items.push_back(items[choice - 1]);
 		cout << "Choice is selected.Add something else to your order or press zero!" << endl;
-	}    
+	}     
 	if (insert_order(order)) cout << "Our order is completed.Thank you for trusting us" << endl;
 	else cout << "Error when creating an order";
 
