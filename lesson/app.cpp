@@ -13,10 +13,8 @@ int main()
 	
 	auto client_id = Authorize();
 	cout << "What do you want to buy?" << endl;
-	
 	int choice = -1;
-	//Клиент регистрируется
-	//Клиент авторизируется
+
 	auto order = Order(client_id);
 	//нужно создать ItemController.h
 	show_items()

@@ -38,22 +38,25 @@ vector<Item> get_items(string table)
     result = pstmt->executeQuery();
     while (result->next())
     {
-        items.push_back(Item(result->getInt(1), result->getString(2).c_str(), result->getInt(3)));
+        items.push_back(Item(result->getString(2).c_str(), result->getInt(3), result->getInt(1)));
     }
     return items;
 }
-void insert_item(Item item)
+bool insert_item(Item item)
 {
     pstmt = con->prepareStatement("INSERT INTO Items(name,balance) values(?,?)");
     pstmt->setString(1,item.name);
     pstmt->setInt(2, item.balance);
-    pstmt->execute();
+    //Неизвестность 
+    result = pstmt->executeQuery();
+    cout << result->getInt(1) << endl;
+    return true;
 }
-void delete_item(int id)
+bool delete_item(int id)
 {
     pstmt = con->prepareStatement("Delete from Items where id=?");
     pstmt->setInt(1, id);
-    pstmt->execute();
+    return pstmt->execute();
 }
 bool insert_order(Order order)
 {
@@ -75,17 +78,17 @@ Item get_item(int item_id)
 {
     pstmt = con->prepareStatement("Select * from items where id='"+to_string(item_id)+"' limit 1");
     result = pstmt->executeQuery();
-    return Item(result->getInt(1), result->getString(2), result->getInt(3));
+    return Item(result->getString(2), result->getInt(3), result->getInt(1));
 }
-void insert_client(Client client)
+bool insert_client(Client client)
 {
     pstmt = con->prepareStatement("INSERT INTO clients (name,age,password,login) values(?,?,?,?)");
     pstmt->setString(1, client.name);
     pstmt->setInt(2, client.age);
     pstmt->setString(3, client.pass);
     pstmt->setString(4, client.login);
-
-    pstmt->execute();
+    //Нужно допилить
+    return pstmt->execute();
 }
 Client* get_client(string login,string password)
 {

@@ -144,9 +144,11 @@
     <ClCompile Include="UserController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdminController.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemController.h" />
     <ClInclude Include="mysql.h" />
     <ClInclude Include="Order.h" />
     <ClInclude Include="UserController.h" />

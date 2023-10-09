@@ -21,7 +21,7 @@ Client* Register()
 	return c;//возвращаем адрес объекта структуры
 }
 
-int Authorize()
+pair<int,string> Authorize()
 {
 	string  login, pass;
 	cout << "Enter  your login: " << endl;
@@ -35,6 +35,6 @@ int Authorize()
 		client=Register();
 	}
 	cout << "Sign in is succesfully completed!" << endl;
-	return client->id;
+	return {client->id,client->role};
 
 }

@@ -3,7 +3,7 @@
 using namespace std;
 struct Item
 {
-    Item(int _id, string _name, int _balance)
+    Item(string _name, int _balance, int _id = 0)
     {
         id = _id;
         name = _name;

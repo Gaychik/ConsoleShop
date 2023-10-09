@@ -1,6 +1,7 @@
 #include <iostream>
 #include "mysql.h"
-void show_actions()
+#include "ItemController.h";
+int show_actions()
 {
 	int choice = -1;
 	while (choice!=0)
@@ -12,19 +13,21 @@ void show_actions()
 		cout << "0. Exit" << endl;
 		cin >> choice;
 		switch (choice)
-		{
+		{	
 		case 1:
-			//Добавить Item Controller
+			add_item();
 			break;
 		case 2:
-			//Добавить Item Controlle
+			remove_item();
 			break;
 		case 3:
-			//Добавить Item Controlle
+			show_items();
 			break;
 		default:
 			cout << "Action incorrect. Repeat try" << endl;
 			break;
 		}
 	}
+	//Если работа с админ панелью завершена, возвращаем 0
+	return choice;
 }

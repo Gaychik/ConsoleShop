@@ -16,11 +16,11 @@
     <Filter Include="Controllers">
       <UniqueIdentifier>{7bd1edbe-b275-4922-8ff2-7bbcc953f592}</UniqueIdentifier>
     </Filter>
+    <Filter Include="db">
+      <UniqueIdentifier>{ebca5c48-38de-4ddf-a164-3088787b92b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mysql.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="app.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -28,10 +28,13 @@
       <Filter>Controllers</Filter>
     </ClCompile>
     <ClCompile Include="AdminController.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Controllers</Filter>
     </ClCompile>
     <ClCompile Include="ItemController.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="mysql.cpp">
+      <Filter>db</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UserController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

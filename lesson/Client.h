@@ -10,8 +10,9 @@ struct Client
 		age = p_age;
 		login = p_login;
 		pass = p_pass;
+		role = "user";
 	}
 public:
-	string name,login,pass;
+	string name,login,pass,role;
 	int age,id;
 };
