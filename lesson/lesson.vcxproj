@@ -151,6 +151,7 @@
     <ClInclude Include="ItemController.h" />
     <ClInclude Include="mysql.h" />
     <ClInclude Include="Order.h" />
+    <ClInclude Include="Shop.h" />
     <ClInclude Include="UserController.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

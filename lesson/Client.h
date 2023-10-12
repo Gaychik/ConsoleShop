@@ -3,14 +3,14 @@
 using namespace std;
 struct Client
 {
-	Client(string p_name, int p_age, string p_login,string p_pass,int p_id=0)
+	Client(string p_name, int p_age, string p_login,string p_pass,int p_id=0,string status="user")
 	{
 		id = p_id;
 		name = p_name;
 		age = p_age;
 		login = p_login;
 		pass = p_pass;
-		role = "user";
+		role = status;
 	}
 public:
 	string name,login,pass,role;

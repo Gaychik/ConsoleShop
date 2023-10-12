@@ -12,4 +12,5 @@ Client* get_client(string login, string password);
 bool insert_order(Order order);
 Item get_item(int item_id);
 vector<Item>get_items_by_order(int order_id);
+bool update_item(vector<Item> items);
 

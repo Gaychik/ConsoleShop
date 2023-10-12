@@ -1,7 +1,9 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include "Client.h"
 #include "mysql.h"
+#include "AdminController.h"
 using namespace std;
 Client* Register()
 {
@@ -21,20 +23,28 @@ Client* Register()
 	return c;//возвращаем адрес объекта структуры
 }
 
-pair<int,string> Authorize()
+int Authorize()
 {
-	string  login, pass;
-	cout << "Enter  your login: " << endl;
-	cin >> login;
-	cout << "Enter  your password: " << endl;
-	cin >> pass;
-	auto client = get_client(login, pass);
-	if (not client)
+	while (true)
 	{
-		cout << "Do sign up now"<<endl;
-		client=Register();
+		string  login, pass;
+		cout << "Enter  your login: " << endl;
+		cin >> login;
+		cout << "Enter  your password: " << endl;
+		cin >> pass;
+		auto client = get_client(login, pass);
+		if (not client)
+		{
+			cout << "Do sign up now" << endl;
+			client = Register();
+		}
+		cout << "Sign in is succesfully completed!" << endl;
+		if (client->role == "admin")
+		{	//запускается админ панель
+			show_actions();
+			continue;
+		}
+		else
+			return client->id;
 	}
-	cout << "Sign in is succesfully completed!" << endl;
-	return {client->id,client->role};
-
 }

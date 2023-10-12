@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "mysql.h"
 #include "ItemController.h";

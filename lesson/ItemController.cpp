@@ -1,16 +1,19 @@
+#pragma once
 #include "mysql.h"
 #include <iostream>
 #include <vector>
-
-vector<Item> items;
+static vector<Item> items;
 void show_items()
 {
 	items = get_items("items");
 	int n = 0;
 	for (auto item : items)
 	{
-		cout << n + 1 << ")" << item.name << "-" << item.balance << endl;
-		n++;
+		if (item.balance > 0)
+		{
+			cout << n + 1 << ")" << item.name << "-" << item.balance << endl;
+			n++;
+		}
 	}
 }
 

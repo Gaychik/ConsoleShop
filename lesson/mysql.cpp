@@ -11,7 +11,7 @@
 #include "mysql.h"
 using namespace std;
 using namespace sql;
-//for demonstration only. never save your password in the code!
+
 Driver* driver;
 Connection* con;
 Statement* stmt;
@@ -103,9 +103,9 @@ Client* get_client(string login,string password)
         result->getInt(5),//возраст
         result->getString(3).c_str(),//логин
         result->getString(4).c_str(),//пароль
-        result->getInt(1)//id
+        result->getInt(1),
+        result->getString(6)//id
     );
-
         return selected_client;
 }
 vector<Item>get_items_by_order(int order_id)
@@ -116,6 +116,23 @@ vector<Item>get_items_by_order(int order_id)
     while (result->next())
         items.push_back(get_item(result->getInt(2)));
     return items;
+}
+bool update_item(vector<Item> items)
+{
+    pstmt = con->prepareStatement("UPDATE items SET balance=? WHERE name=?");
+    bool result;
+    for (auto item : items)
+    {
+        pstmt->setInt(1,item.balance);
+        pstmt->setString(2, item.name);
+        result=pstmt->execute();
+        if (result == false)
+        {
+            cout << "Error when purchacing item!" << endl;
+            return result;
+        }
+    }
+    return result;
 }
 
 
