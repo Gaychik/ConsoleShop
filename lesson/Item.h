@@ -1,17 +1,10 @@
 #pragma once
 #include <string>
-using namespace std;
 struct Item
 {
-    Item() {};
-    Item(string _name, int _balance, int _id = 0)
-    {
-        id = _id;
-        name = _name;
-        balance = _balance;
-    }
+    Item(std::string _name, int _balance, int _id = 0);
 public:
     int id;
-    string name;
+    std::string name;
     int balance;
 };

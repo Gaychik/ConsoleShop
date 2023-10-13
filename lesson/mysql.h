@@ -1,16 +1,16 @@
 #pragma once
 #include "Item.h"
-#include <vector>
 #include "Client.h"
 #include "Order.h"
+#include <string>
 void connection_to_db();
-vector<Item> get_items(string table);
-bool insert_item(Item item);
-bool delete_item(int id);
-bool insert_client(Client client);
-Client* get_client(string login, string password);
-bool insert_order(Order order);
-Item get_item(int item_id);
-vector<Item>get_items_by_order(int order_id);
-bool update_item(vector<Item> items);
+vector<Item> get_items(string);
+bool insert_item(Item);
+bool delete_item(int);
+bool insert_client(Client );
+Client* get_client(string ,string);
+bool insert_order(Order);
+Item get_item(int);
+vector<Item>get_items_by_order(int);
+bool update_item(vector<Item>);
 

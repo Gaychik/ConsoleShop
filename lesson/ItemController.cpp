@@ -2,7 +2,8 @@
 #include "mysql.h"
 #include <iostream>
 #include <vector>
-static vector<Item> items;
+using namespace std;
+vector<Item> items;
 void show_items()
 {
 	items = get_items("items");

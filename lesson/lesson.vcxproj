@@ -139,8 +139,12 @@
   <ItemGroup>
     <ClCompile Include="AdminController.cpp" />
     <ClCompile Include="app.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="ItemController.cpp" />
     <ClCompile Include="mysql.cpp" />
+    <ClCompile Include="Order.cpp" />
+    <ClCompile Include="Shop.cpp" />
     <ClCompile Include="UserController.cpp" />
   </ItemGroup>
   <ItemGroup>

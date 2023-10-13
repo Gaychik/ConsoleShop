@@ -1,11 +1,9 @@
 ﻿  AdminController.cpp
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(6,9): error C2061: syntax error: identifier 'string'
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,9): error C3646: 'nam': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,2): error C3646: 'string': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,9): error C3646: 'login': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,2): error C3646: 'string': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,9): error C3646: 'pass': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(11,9): error C3646: 'role': unknown override specifier
@@ -31,11 +29,9 @@ E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson
   ItemController.cpp
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(6,9): error C2061: syntax error: identifier 'string'
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,9): error C3646: 'nam': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,2): error C3646: 'string': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,9): error C3646: 'login': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,2): error C3646: 'string': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,9): error C3646: 'pass': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(11,9): error C3646: 'role': unknown override specifier
@@ -71,43 +67,14 @@ E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\ItemController.cpp(34,3): error C2065: 'items': undeclared identifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\ItemController.cpp(44,18): error C2065: 'items': undeclared identifier
   mysql.cpp
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(6,9): error C2061: syntax error: identifier 'string'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,9): error C3646: 'nam': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,9): error C3646: 'login': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,9): error C3646: 'pass': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(11,9): error C3646: 'role': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(11,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(86,32): error C2039: 'name': is not a member of 'Client'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(4,8): message : see declaration of 'Client'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(86,10): error C2660: 'sql::PreparedStatement::setString': function does not take 1 arguments
-E:\_Личные папки преподавателей\Prepod_Gaychikov\libraries\mysql-8.1.064\include\jdbc\cppconn\prepared_statement.h(91,16): message : see declaration of 'sql::PreparedStatement::setString'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(86,10): message : while trying to match the argument list '(int)'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(88,32): error C2039: 'pass': is not a member of 'Client'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(4,8): message : see declaration of 'Client'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(88,10): error C2660: 'sql::PreparedStatement::setString': function does not take 1 arguments
-E:\_Личные папки преподавателей\Prepod_Gaychikov\libraries\mysql-8.1.064\include\jdbc\cppconn\prepared_statement.h(91,16): message : see declaration of 'sql::PreparedStatement::setString'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(88,10): message : while trying to match the argument list '(int)'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(89,32): error C2039: 'login': is not a member of 'Client'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(4,8): message : see declaration of 'Client'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(89,10): error C2660: 'sql::PreparedStatement::setString': function does not take 1 arguments
-E:\_Личные папки преподавателей\Prepod_Gaychikov\libraries\mysql-8.1.064\include\jdbc\cppconn\prepared_statement.h(91,16): message : see declaration of 'sql::PreparedStatement::setString'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(89,10): message : while trying to match the argument list '(int)'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(101,33): error C2661: 'Client::Client': no overloaded function takes 6 arguments
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(101,33): message : while trying to match the argument list '(const char *, int32_t, const char *, const char *, int32_t, sql::SQLString)'
+E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\mysql.cpp(4,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
   Order.cpp
   Shop.cpp
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(6,9): error C2061: syntax error: identifier 'string'
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,9): error C3646: 'nam': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,2): error C3646: 'string': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,9): error C3646: 'login': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,2): error C3646: 'string': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,9): error C3646: 'pass': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(11,9): error C3646: 'role': unknown override specifier
@@ -148,11 +115,9 @@ E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson
   UserController.cpp
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(6,9): error C2061: syntax error: identifier 'string'
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,9): error C3646: 'nam': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(8,12): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,2): error C3646: 'string': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,9): error C3646: 'login': unknown override specifier
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2059: syntax error: '{'
-E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(9,14): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,2): error C3646: 'string': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,9): error C3646: 'pass': unknown override specifier
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(10,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\Client.h(11,9): error C3646: 'role': unknown override specifier
@@ -178,3 +143,4 @@ E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\UserController.cpp(36,17): error C3536: 'client': cannot be used before it is initialized
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\UserController.cpp(39,21): error C2440: '=': cannot convert from 'Client *' to 'int'
 E:\_Личные папки преподавателей\Prepod_Gaychikov\lesson\lesson\UserController.cpp(39,21): message : There is no context in which this conversion is possible
+  Generating Code...

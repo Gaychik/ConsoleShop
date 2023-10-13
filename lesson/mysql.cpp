@@ -7,11 +7,11 @@
 #include <cppconn/prepared_statement.h>
 #include <vector>
 #include "Item.h"
+#include "Order.h"
+#include "Client.h"
 #include "config.h"
-#include "mysql.h"
 using namespace std;
 using namespace sql;
-
 Driver* driver;
 Connection* con;
 Statement* stmt;
@@ -120,7 +120,7 @@ vector<Item>get_items_by_order(int order_id)
 bool update_item(vector<Item> items)
 {
     pstmt = con->prepareStatement("UPDATE items SET balance=? WHERE name=?");
-    bool result;
+    bool result=true;
     for (auto item : items)
     {
         pstmt->setInt(1,item.balance);

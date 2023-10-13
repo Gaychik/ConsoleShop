@@ -2,6 +2,7 @@
 #include <iostream>
 #include "mysql.h"
 #include "ItemController.h";
+using namespace std;
 int show_actions()
 {
 	int choice = -1;
